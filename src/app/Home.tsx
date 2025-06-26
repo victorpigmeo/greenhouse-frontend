@@ -22,8 +22,7 @@ export function Home() {
             return response.json();
         }).then((response) => {
             setHistoricalData(response.map((item: any) => ({ ...item, timestamp: new Date(item.timestamp).toLocaleString() })));
-        }).catch((err) => console.error(err))
-            .finally(() => { console.log("TODO: implement loading") });
+        }).catch((err) => console.error(err));
     }
 
     useEffect(() => {

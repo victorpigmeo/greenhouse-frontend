@@ -10,10 +10,7 @@ export function ControlsCard() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             return response.json();
-        }).then((response) => {
-            console.log(response);
-        }).catch((err) => console.error(err))
-            .finally(() => { console.log("TODO: implement loading") });
+        }).catch((err) => console.error(err));
 
     };
     
